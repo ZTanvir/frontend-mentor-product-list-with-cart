@@ -1,17 +1,30 @@
+import AddToCartBtn from "./addToCartBtn";
+import { useState } from "react";
+
 const ProductCard = ({ product }) => {
+  const [isItemInCart, setIsItemInCart] = useState(null);
+
   return (
     <section className="product-card-container">
-      <picture>
-        <source
-          media="(min-width:900px)"
-          srcSet={`./src/${product.image.desktop}`}
+      <div>
+        <picture>
+          <source
+            media="(min-width:900px)"
+            srcSet={`./src/${product.image.desktop}`}
+          />
+          <source
+            media="(min-width:650px)"
+            srcSet={`./src/${product.image.tablet}`}
+          />
+          <img src={`./src/${product.image.mobile}`} alt={product.name} />
+        </picture>
+        <AddToCartBtn
+          product={product}
+          isItemInCart={isItemInCart}
+          setIsItemInCart={setIsItemInCart}
         />
-        <source
-          media="(min-width:650px)"
-          srcSet={`./src/${product.image.tablet}`}
-        />
-        <img src={`./src/${product.image.mobile}`} alt={product.name} />
-      </picture>
+      </div>
+
       <div className="itemInfo">
         <h2 className="itemName">{product.name}</h2>
         <p className="itemCategory">{product.category}</p>
