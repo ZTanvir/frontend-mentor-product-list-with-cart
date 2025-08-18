@@ -10,5 +10,5 @@ export function cartProvider({ children }) {
 }
 
 export function useCart() {
-  return useContext(cartContext);
+    return useContext(cartContext)
 }
