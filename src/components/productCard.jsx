@@ -5,8 +5,12 @@ const ProductCard = ({ product }) => {
   const [isItemInCart, setIsItemInCart] = useState(null);
 
   return (
-    <section className="product-card-container">
-      <div>
+    <section
+      data-stack
+      style={{ "--gutter": "38px" }}
+      className="product-card-container"
+    >
+      <div className="product-card__image-btn-container">
         <picture>
           <source
             media="(min-width:900px)"
@@ -24,11 +28,10 @@ const ProductCard = ({ product }) => {
           setIsItemInCart={setIsItemInCart}
         />
       </div>
-
       <div className="itemInfo">
         <h2 className="itemName">{product.name}</h2>
         <p className="itemCategory">{product.category}</p>
-        <p className="itemPrice">{product.price}</p>
+        <p className="itemPrice">${product.price}</p>
       </div>
     </section>
   );

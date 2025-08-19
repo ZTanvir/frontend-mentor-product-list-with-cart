@@ -13,19 +13,23 @@ const AddToCartBtn = ({ product, isItemInCart, setIsItemInCart }) => {
   } = useCart();
 
   const addToCartBtn = (
-    <div onClick={() => addItemToCart(product)} className="addToCartContainer">
+    <div
+      data-center="center-children"
+      onClick={() => addItemToCart(product)}
+      className="addToCartContainer"
+    >
       <img src={addToCartIcon} alt="cart icon" />
       <span>Add to Cart</span>
     </div>
   );
   const adjustProductBtn = (
-    <div className="adjustProductContainer">
+    <div data-split="fraction:3/1" className="adjustProductContainer">
       <img
         onClick={() => decrementProductAmount(product)}
         src={decrementIcon}
         alt="minus symbol"
       />
-      <span>{isItemInCart && isItemInCart.qty}</span>
+      <span className="product-qty">{isItemInCart && isItemInCart.qty}</span>
       <img
         onClick={() => incrementProductAmount(product)}
         src={incrementIcon}
