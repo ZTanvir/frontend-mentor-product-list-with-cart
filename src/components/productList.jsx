@@ -11,10 +11,16 @@ const ProductList = () => {
   return (
     <>
       <h1>Desserts</h1>
-      {Boolean(products.length) &&
-        products.map((product, index) => (
-          <ProductCard key={index} product={product} />
-        ))}
+      <div
+        data-grid
+        style={{ "--gutter": "1rem" }}
+        className="products-container"
+      >
+        {Boolean(products.length) &&
+          products.map((product, index) => (
+            <ProductCard key={index} product={product} />
+          ))}
+      </div>
     </>
   );
 };
