@@ -9,19 +9,19 @@ const ProductList = () => {
   }
 
   return (
-    <>
+    <div
+      data-stack
+      style={{ "--gutter": "32px" }}
+      className="products-container"
+    >
       <h1>Desserts</h1>
-      <div
-        data-grid
-        style={{ "--gutter": "1rem" }}
-        className="products-container"
-      >
+      <div data-grid style={{ "--gutter": "1rem" }} className="products">
         {Boolean(products.length) &&
           products.map((product, index) => (
             <ProductCard key={index} product={product} />
           ))}
       </div>
-    </>
+    </div>
   );
 };
 export default ProductList;

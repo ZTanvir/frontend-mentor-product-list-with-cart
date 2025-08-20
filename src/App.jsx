@@ -7,7 +7,9 @@ function App() {
     <main>
       <ProductProvider>
         <CartProvider>
-          <ProductList />
+          <main>
+            <ProductList />
+          </main>
         </CartProvider>
       </ProductProvider>
     </main>

@@ -20,7 +20,11 @@ const ProductCard = ({ product }) => {
             media="(min-width:650px)"
             srcSet={`./src/${product.image.tablet}`}
           />
-          <img src={`./src/${product.image.mobile}`} alt={product.name} />
+          <img
+            className={isItemInCart ? "activeProduct" : ""}
+            src={`./src/${product.image.mobile}`}
+            alt={product.name}
+          />
         </picture>
         <AddToCartBtn
           product={product}
