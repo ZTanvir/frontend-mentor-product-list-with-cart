@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "RedHatText";
+  src: url("./assets/fonts/RedHatText-VariableFont_wght.ttf");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+}
+
 /* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
@@ -70,6 +77,8 @@ html {
   --color-rose: #ad8a85;
   --color-rose-500: #87635a;
   --color-red: #c73b0f;
+  --color-rose-900: #260f08;
+  font-family: RedHatText;
 }
 main {
   padding: 0.5rem;
@@ -85,9 +94,18 @@ main {
 }
 .product-card-container .itemName {
   color: var(--color-rose-500);
+  font-weight: 400;
+  font-size: 16px;
+}
+.product-card-container .itemCategory {
+  color: var(--color-rose-900);
+  font-weight: 600;
+  font-size: 18px;
 }
 .product-card-container .itemPrice {
   color: var(--color-red);
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .product-card__image-btn-container {
