@@ -32,8 +32,8 @@ const AddToCartBtn = ({ product, isItemInCart, setIsItemInCart }) => {
     <div data-split="fraction:3/1" className="adjustProductContainer">
       <img
         onClick={() => decrementProductAmount(product)}
-        onMouseEnter={(e) => (iconDecrementEl.current.src = decrementIconHover)}
-        onMouseLeave={(e) => (iconDecrementEl.current.src = decrementIcon)}
+        onMouseOver={(e) => (iconDecrementEl.current.src = decrementIconHover)}
+        onMouseOut={(e) => (iconDecrementEl.current.src = decrementIcon)}
         ref={iconDecrementEl}
         src={decrementIcon}
         alt="minus symbol"
@@ -41,8 +41,8 @@ const AddToCartBtn = ({ product, isItemInCart, setIsItemInCart }) => {
       <span className="product-qty">{isItemInCart && isItemInCart.qty}</span>
       <img
         onClick={() => incrementProductAmount(product)}
-        onMouseEnter={(e) => (iconIncrementEl.current.src = incrementIconHover)}
-        onMouseLeave={(e) => (iconIncrementEl.current.src = incrementIcon)}
+        onMouseOver={(e) => (iconIncrementEl.current.src = incrementIconHover)}
+        onMouseOut={(e) => (iconIncrementEl.current.src = incrementIcon)}
         ref={iconIncrementEl}
         src={incrementIcon}
         alt="plus symbol"
