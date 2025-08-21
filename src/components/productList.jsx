@@ -22,9 +22,6 @@ const ProductList = () => {
             <ProductCard key={index} product={product} />
           ))}
       </div>
-      <div>
-        <CartCard name="dsd" qty={10} price={100} />
-      </div>
     </div>
   );
 };

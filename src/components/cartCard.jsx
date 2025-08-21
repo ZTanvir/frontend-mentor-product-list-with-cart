@@ -7,25 +7,32 @@ const CartCard = ({ name, qty, price }) => {
   const cartRemoveIconEl = useRef();
 
   return (
-    <section data-inline="space-between" className="cartItem-container">
-      <div data-stack style={{ "--gutter": ".25rem" }}>
-        <p className="cartItemName">{name}</p>
-        <div data-inline style={{ "--gutter": ".5rem" }}>
-          <span className="cartItemQty">{qty}x</span>
-          <span className="cartItemPrice">@ {price}</span>
-          <span className="cartItemTotal">${totalPrice}</span>
+    <section
+      data-stack
+      style={{ "--gutter": "1.5rem" }}
+      className="cartItem-container"
+    >
+      <div data-inline="space-between">
+        <div data-stack style={{ "--gutter": ".25rem" }}>
+          <h3 className="cartItemName">{name}</h3>
+          <div data-inline style={{ "--gutter": ".5rem" }}>
+            <span className="cartItemQty">{qty}x</span>
+            <span className="cartItemPrice">@ {price}</span>
+            <span className="cartItemTotal">${totalPrice}</span>
+          </div>
         </div>
+        <img
+          onMouseOver={(e) =>
+            (cartRemoveIconEl.current.src = iconRemoveItemHover)
+          }
+          onMouseOut={(e) => (cartRemoveIconEl.current.src = iconRemoveItem)}
+          className="cartItemImg"
+          ref={cartRemoveIconEl}
+          src={iconRemoveItem}
+          alt="remove item from cart"
+        />
       </div>
-      <img
-        onMouseOver={(e) =>
-          (cartRemoveIconEl.current.src = iconRemoveItemHover)
-        }
-        onMouseOut={(e) => (cartRemoveIconEl.current.src = iconRemoveItem)}
-        className="cartItemImg"
-        ref={cartRemoveIconEl}
-        src={iconRemoveItem}
-        alt="remove item from cart"
-      />
+      <div className="border-bottom-red-100"></div>
     </section>
   );
 };
