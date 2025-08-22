@@ -5,16 +5,14 @@ import { ProductProvider } from "./context/ProductContext";
 import "./App.css";
 function App() {
   return (
-    <main>
-      <ProductProvider>
-        <CartProvider>
-          <main>
-            <ProductList />
-            <Cart />
-          </main>
-        </CartProvider>
-      </ProductProvider>
-    </main>
+    <ProductProvider>
+      <CartProvider>
+        <main>
+          <ProductList />
+          <Cart />
+        </main>
+      </CartProvider>
+    </ProductProvider>
   );
 }
 
