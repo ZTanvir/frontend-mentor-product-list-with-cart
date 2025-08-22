@@ -1,12 +1,12 @@
 import { useCart } from "../context/CartContext";
 import CartCard from "./cartCard";
 import ActionBtn from "./button-red";
+import CalculateTotal from "./calculateTotal";
 import iconCarbonNeutral from "../assets/images/icon-carbon-neutral.svg";
 import emptyCartImg from "../assets/images/illustration-empty-cart.svg";
 
 const Cart = () => {
   const { cart } = useCart();
-  const totalPrice = cart.reduce((acc, cur) => acc + cur.price * cur.qty, 0);
 
   return (
     <div data-stack className="cart-container" style={{ "--gutter": "1rem" }}>
@@ -22,10 +22,7 @@ const Cart = () => {
               <CartCard name={item.name} qty={item.qty} price={item.price} />
             ))}
           </div>
-          <div data-inline="space-between">
-            <span>Oder Total</span>
-            <span className="cartItemsTotal">${totalPrice.toFixed(2)}</span>
-          </div>
+          <CalculateTotal items={cart} />
           <div
             data-center="center-children"
             data-inline
