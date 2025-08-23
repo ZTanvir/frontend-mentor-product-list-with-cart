@@ -4,9 +4,12 @@ import ActionBtn from "./button-red";
 import CalculateTotal from "./calculateTotal";
 import iconCarbonNeutral from "../assets/images/icon-carbon-neutral.svg";
 import emptyCartImg from "../assets/images/illustration-empty-cart.svg";
+import OrderConfirmModal from "./orderConfirmModal";
+import { useRef } from "react";
 
 const Cart = () => {
   const { cart } = useCart();
+  const modalRef = useRef(null);
 
   return (
     <div data-stack className="cart-container" style={{ "--gutter": "1rem" }}>
@@ -37,9 +40,7 @@ const Cart = () => {
             </p>
           </div>
           <ActionBtn
-            handleOnClick={() => {
-              console.log("confirm order btn clicked");
-            }}
+            handleOnClick={() => modalRef.current.showModal()}
             text="Confirm Order"
           />
         </div>
@@ -55,6 +56,9 @@ const Cart = () => {
           </p>
         </div>
       )}
+      <OrderConfirmModal modalRef={modalRef}>
+        {/* <p onClick={() => modalRef.current.close()}>Close</p> */}
+      </OrderConfirmModal>
     </div>
   );
 };
