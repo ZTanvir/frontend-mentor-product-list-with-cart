@@ -17,8 +17,8 @@ const CartCard = ({ name, qty, price }) => {
           <h3 className="cartItemName">{name}</h3>
           <div data-inline style={{ "--gutter": ".5rem" }}>
             <span className="cartItemQty">{qty}x</span>
-            <span className="cartItemPrice">@ {price}</span>
-            <span className="cartItemTotal">${totalPrice}</span>
+            <span className="cartItemPrice">@ {price.toFixed(2)}</span>
+            <span className="cartItemTotal">${totalPrice.toFixed(2)}</span>
           </div>
         </div>
         <img
