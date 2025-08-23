@@ -4,7 +4,7 @@ import iconRemoveItemHover from "../assets/images/icon-remove-item-hover.svg";
 
 const CartCard = ({ name, qty, price }) => {
   const totalPrice = qty * price;
-  const cartRemoveIconEl = useRef();
+  const cartRemoveIconEl = useRef(null);
 
   return (
     <section
