@@ -5,6 +5,7 @@ import CalculateTotal from "./calculateTotal";
 import iconCarbonNeutral from "../assets/images/icon-carbon-neutral.svg";
 import emptyCartImg from "../assets/images/illustration-empty-cart.svg";
 import Modal from "./modal";
+import OrderConfirm from "./orderConfirm";
 import { useRef } from "react";
 
 const Cart = () => {
@@ -57,7 +58,10 @@ const Cart = () => {
         </div>
       )}
       <Modal modalRef={modalRef}>
-        {/* <p onClick={() => modalRef.current.close()}>Close</p> */}
+        <OrderConfirm
+          handleCloseModal={() => modalRef.current.close()}
+          itemList={cart}
+        />
       </Modal>
     </div>
   );

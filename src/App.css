@@ -171,7 +171,7 @@ main {
   color: var(--color-red);
 }
 
-.cart-with-product-container .actionBtn {
+.actionBtn {
   background-color: var(--color-red);
   color: var(--color-white);
   padding: 1rem;
@@ -180,12 +180,12 @@ main {
   font-weight: 600;
   font-size: 16px;
 }
-.cart-with-product-container .actionBtn:hover {
+.actionBtn:hover {
   background-color: var(--color-rose-900);
   cursor: pointer;
 }
 
-.cart-with-product-container .cartItemsTotal {
+.cartItemsTotal {
   font-size: var(--color-rose-900);
   font-weight: 700;
   font-size: 24px;
@@ -233,6 +233,50 @@ main {
 .cartItem-container .cartItemImg:hover {
   cursor: pointer;
 }
+/* Confirm Order */
+/* Confirm Order Modal */
+#orderConfirmModal {
+  margin: auto;
+  border: none;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 320px;
+}
+.order-confirm-container .product .item-image {
+  width: 40px;
+  height: 40px;
+}
+.order-confirm-container .confirm-order-img {
+  align-self: flex-start;
+}
+.product-list {
+  background-color: var(--color-rose-100, #f5eeec);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.order-confirm-container .subtitle {
+  color: var(--color-rose-400);
+}
+.order-confirm-container .product {
+  font-size: 14px;
+}
+:is(.order-confirm-container .item-name, .order-confirm-container .total) {
+  font-weight: 600;
+}
+:is(
+    .order-confirm-container .item-quantity,
+    .order-confirm-container .item-price
+  ) {
+  font-weight: 400;
+}
+.order-confirm-container .item-quantity {
+  color: var(--color-red, #c73b0f);
+  margin-right: 1rem;
+}
+.order-confirm-container .item-price {
+  color: var(--color-rose-500, #87635a);
+}
+
 [data-stack] {
   --gutter: initial;
   display: flex;
@@ -290,12 +334,18 @@ main {
   main {
     padding: 1rem;
   }
+  #orderConfirmModal {
+    width: 500px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   main {
     padding: 1.5rem;
+  }
+  #orderConfirmModal {
+    width: 600px;
   }
 }
 
@@ -305,9 +355,13 @@ main {
     padding: 2rem;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    gap: 2rem;
   }
   /* cart */
   .cart-container {
     padding: 0rem;
+  }
+  #orderConfirmModal {
+    width: 650px;
   }
 }
