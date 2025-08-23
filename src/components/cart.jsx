@@ -4,7 +4,7 @@ import ActionBtn from "./button-red";
 import CalculateTotal from "./calculateTotal";
 import iconCarbonNeutral from "../assets/images/icon-carbon-neutral.svg";
 import emptyCartImg from "../assets/images/illustration-empty-cart.svg";
-import OrderConfirmModal from "./orderConfirmModal";
+import Modal from "./modal";
 import { useRef } from "react";
 
 const Cart = () => {
@@ -56,9 +56,9 @@ const Cart = () => {
           </p>
         </div>
       )}
-      <OrderConfirmModal modalRef={modalRef}>
+      <Modal modalRef={modalRef}>
         {/* <p onClick={() => modalRef.current.close()}>Close</p> */}
-      </OrderConfirmModal>
+      </Modal>
     </div>
   );
 };
