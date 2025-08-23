@@ -235,6 +235,7 @@ main {
 }
 /* Confirm Order */
 /* Confirm Order Modal */
+
 #orderConfirmModal {
   margin: auto;
   border: none;
@@ -245,12 +246,13 @@ main {
 .order-confirm-container .product .item-image {
   width: 40px;
   height: 40px;
+  border-radius: 8px;
 }
 .order-confirm-container .confirm-order-img {
   align-self: flex-start;
 }
 .product-list {
-  background-color: var(--color-rose-100, #f5eeec);
+  background-color: var(--color-rose-50, #fcf8f6);
   border-radius: 8px;
   padding: 1rem;
 }
@@ -259,6 +261,9 @@ main {
 }
 .order-confirm-container .product {
   font-size: 14px;
+  /* Increase bottom border visibility */
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-rose-100, #f5eeec);
 }
 :is(.order-confirm-container .item-name, .order-confirm-container .total) {
   font-weight: 600;
