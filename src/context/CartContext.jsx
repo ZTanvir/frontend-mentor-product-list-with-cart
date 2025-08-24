@@ -9,6 +9,10 @@ export function CartProvider({ children }) {
     copyProduct.qty = 1;
     setCart((prev) => prev.concat(copyProduct));
   };
+  const removeItemFromCart = (name) => {
+    const nextCart = cart.filter((item) => !(item.name === name));
+    setCart(nextCart);
+  };
   const incrementProductAmount = (product) => {
     const nextCart = cart.map((item) => {
       if (item.name === product.name) {
@@ -34,11 +38,13 @@ export function CartProvider({ children }) {
       setCart(nextCart);
     }
   };
+
   return (
     <cartContext.Provider
       value={{
         cart,
         addItemToCart,
+        removeItemFromCart,
         incrementProductAmount,
         decrementProductAmount,
       }}

@@ -1,10 +1,12 @@
 import { useRef } from "react";
 import iconRemoveItem from "../assets/images/icon-remove-item.svg";
 import iconRemoveItemHover from "../assets/images/icon-remove-item-hover.svg";
+import { useCart } from "../context/CartContext";
 
 const CartCard = ({ name, qty, price }) => {
-  const totalPrice = qty * price;
   const cartRemoveIconEl = useRef(null);
+  const { removeItemFromCart } = useCart();
+  const totalPrice = qty * price;
 
   return (
     <section
@@ -22,6 +24,7 @@ const CartCard = ({ name, qty, price }) => {
           </div>
         </div>
         <img
+          onClick={() => removeItemFromCart(name)}
           onMouseOver={(e) =>
             (cartRemoveIconEl.current.src = iconRemoveItemHover)
           }
