@@ -1,6 +1,5 @@
 import { useProducts } from "../context/ProductContext";
 import ProductCard from "./productCard";
-import CartCard from "./cartCard";
 
 const ProductList = () => {
   const { products, error, isLoading } = useProducts();
@@ -18,8 +17,8 @@ const ProductList = () => {
       <h1>Desserts</h1>
       <div data-grid style={{ "--gutter": "1rem" }} className="products">
         {Boolean(products.length) &&
-          products.map((product, index) => (
-            <ProductCard key={index} product={product} />
+          products.map((product) => (
+            <ProductCard key={product.id} product={product} />
           ))}
       </div>
     </div>

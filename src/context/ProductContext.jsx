@@ -15,7 +15,10 @@ export const ProductProvider = ({ children }) => {
           throw new Error("Error on fetching products data");
         }
         const data = await response.json();
-        setProducts(data);
+        const addIdToDataItems = data.map((item) => {
+          return { ...item, id: crypto.randomUUID() };
+        });
+        setProducts(addIdToDataItems);
       } catch (error) {
         setError(error.message);
       } finally {

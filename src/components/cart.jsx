@@ -23,7 +23,12 @@ const Cart = () => {
         >
           <div className="cart-products-container">
             {cart.map((item) => (
-              <CartCard name={item.name} qty={item.qty} price={item.price} />
+              <CartCard
+                key={item.id}
+                name={item.name}
+                qty={item.qty}
+                price={item.price}
+              />
             ))}
           </div>
           <CalculateTotal items={cart} />

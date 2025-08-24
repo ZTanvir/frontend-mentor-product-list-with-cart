@@ -22,7 +22,7 @@ const OrderConfirm = ({ handleCloseModal, itemList }) => {
       <div className="product-list">
         <div className="products" data-stack style={{ "--gutter": "1.2rem" }}>
           {itemList.map((item) => (
-            <ItemInOrder item={item} />
+            <ItemInOrder key={item.id} item={item} />
           ))}
         </div>
         <CalculateTotal items={itemList} />
