@@ -11,6 +11,8 @@ export const ProductProvider = ({ children }) => {
     const fetchProducts = async () => {
       try {
         const response = await fetch("api/products");
+        console.log(response);
+
         if (!response.ok) {
           throw new Error("Error on fetching products data");
         }

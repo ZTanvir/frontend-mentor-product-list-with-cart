@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    {
+      "source": "/api",
+      "destination": "https://product-list-with-cart-json-server.onrender.com" },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
