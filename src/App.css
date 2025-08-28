@@ -147,6 +147,9 @@ main {
 .addToCartBtn:hover:has(.addToCartContainer) {
   border: 1px solid var(--color-red);
 }
+.addToCartBtn .addToCartContainer {
+  height: 100%;
+}
 
 .addToCartBtn .adjustProductContainer {
   /* center */
