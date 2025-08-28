@@ -10,7 +10,7 @@ export const ProductProvider = ({ children }) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:8000/products");
+        const response = await fetch("api/products");
         if (!response.ok) {
           throw new Error("Error on fetching products data");
         }
