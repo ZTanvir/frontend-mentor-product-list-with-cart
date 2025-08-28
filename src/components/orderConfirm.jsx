@@ -19,7 +19,7 @@ const OrderConfirm = ({ handleCloseModal, itemList }) => {
         <h2 className="title">Order Confirmed</h2>
         <p className="subtitle">We hope you enjoy your food!</p>
       </div>
-      <div className="product-list">
+      <div data-stack style={{ "--gutter": "1rem" }} className="product-list">
         <div className="products" data-stack style={{ "--gutter": "1.2rem" }}>
           {itemList.map((item) => (
             <ItemInOrder key={item.id} item={item} />
