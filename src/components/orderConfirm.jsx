@@ -1,5 +1,5 @@
 import ActionBtn from "./button-red";
-import orderConfirmIcon from "../assets/images/icon-order-confirmed.svg";
+import orderConfirmIcon from "../../public/assets/images/icon-order-confirmed.svg";
 import ItemInOrder from "./itemInOrder";
 import CalculateTotal from "./calculateTotal";
 

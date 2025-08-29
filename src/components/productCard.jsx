@@ -14,15 +14,15 @@ const ProductCard = ({ product }) => {
         <picture>
           <source
             media="(min-width:900px)"
-            srcSet={`../src/${product.image.desktop}`}
+            srcSet={`../../public/${product.image.desktop}`}
           />
           <source
             media="(min-width:650px)"
-            srcSet={`../src/${product.image.tablet}`}
+            srcSet={`../../public/${product.image.tablet}`}
           />
           <img
             className={isItemInCart ? "activeProduct" : ""}
-            src={`../src/${product.image.mobile}`}
+            src={`../../public/${product.image.mobile}`}
             alt={product.name}
           />
         </picture>

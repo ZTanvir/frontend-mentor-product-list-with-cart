@@ -1,8 +1,8 @@
-import addToCartIcon from "../assets/images/icon-add-to-cart.svg";
-import incrementIcon from "../assets/images/icon-increment-quantity.svg";
-import incrementIconHover from "../assets/images/icon-increment-quantity-hover.svg";
-import decrementIcon from "../assets/images/icon-decrement-quantity.svg";
-import decrementIconHover from "../assets/images/icon-decrement-quantity-hover.svg";
+import addToCartIcon from "../../public/assets/images/icon-add-to-cart.svg";
+import incrementIcon from "../../public//assets/images/icon-increment-quantity.svg";
+import incrementIconHover from "../../public/assets/images/icon-increment-quantity-hover.svg";
+import decrementIcon from "../../public/assets/images/icon-decrement-quantity.svg";
+import decrementIconHover from "../../public/assets/images/icon-decrement-quantity-hover.svg";
 import { useCart } from "../context/CartContext";
 import { useEffect, useRef } from "react";
 
