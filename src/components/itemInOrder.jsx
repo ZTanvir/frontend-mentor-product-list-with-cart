@@ -8,7 +8,7 @@ const ItemInOrder = ({ item }) => {
       <div data-inline style={{ "--gutter": "1rem" }}>
         <img
           className="item-image"
-          src={`src/${item.image.thumbnail}`}
+          src={item.image.thumbnail}
           alt={item.name}
         />
         <div data-stack>
