@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import iconRemoveItem from "../../public/assets/images/icon-remove-item.svg";
-import iconRemoveItemHover from "../../public/assets/images/icon-remove-item-hover.svg";
+import iconRemoveItem from "../assets/images/icon-remove-item.svg";
+import iconRemoveItemHover from "../assets/images/icon-remove-item-hover.svg";
 import { useCart } from "../context/CartContext";
 
 const CartCard = ({ name, qty, price }) => {

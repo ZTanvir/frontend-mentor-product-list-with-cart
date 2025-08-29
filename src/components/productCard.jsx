@@ -12,17 +12,11 @@ const ProductCard = ({ product }) => {
     >
       <div className="product-card__image-btn-container">
         <picture>
-          <source
-            media="(min-width:900px)"
-            srcSet={`../../public/${product.image.desktop}`}
-          />
-          <source
-            media="(min-width:650px)"
-            srcSet={`../../public/${product.image.tablet}`}
-          />
+          <source media="(min-width:900px)" srcSet={product.image.desktop} />
+          <source media="(min-width:650px)" srcSet={product.image.tablet} />
           <img
             className={isItemInCart ? "activeProduct" : ""}
-            src={`../../public/${product.image.mobile}`}
+            src={product.image.mobile}
             alt={product.name}
           />
         </picture>
