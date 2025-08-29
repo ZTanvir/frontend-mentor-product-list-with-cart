@@ -29,15 +29,15 @@ Users should be able to:
 
 ### Screenshot
 
-![Mobile](screenshot/mobileScreenShoot.png)
+![Mobile](./src/assets/screenshot/screenshot-mobile-Product-list-with-cart.png)
 
 - Mobile Screen
 
-![Tablet](screenshot/tablet.png)
+![Tablet](./src/assets/screenshot/screenshot-tablet-Product-list-with-cart.png)
 
 - Tablet Screen
 
-![laptop](screenshot/laptop.png)
+![laptop](./src/assets/screenshot/screenshot-pc-Product-list-with-cart.png)
 
 - Laptop Screen
 
